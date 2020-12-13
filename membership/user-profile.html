@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>RamK Demo Application</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="">
+	<meta name="author" content="RamK" />
+	<!-- Favicon icon -->
+	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+	<!-- ekko-lightbox css -->
+	<link rel="stylesheet" href="assets/css/plugins/ekko-lightbox.css">
+	<link rel="stylesheet" href="assets/css/plugins/lightbox.min.css">
+    <!-- select2 css -->
+    <link rel="stylesheet" href="assets/css/plugins/select2.min.css">
+	<!-- vendor css -->
+	<link rel="stylesheet" href="assets/css/style.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+	<style>
+	body {
+		font-family:'Poppins', sans-serif!important; 
+		overflow-x: hidden!important;
+		background: #394f7d;
+		font-size:13px!important;
+	}
+	.pcoded-main-container {
+		margin: 15px;
+		border-radius:5px;
+	} 
+	.formio-component,.form-control,.select2-selection__rendered {
+		font-size:14px!important;
+	}
+	</style>
+	
+</head>
+<body class="">
+	<!-- [ Pre-loader ] start -->
+	<div class="loader-bg">
+		<div class="loader-track">
+			<div class="loader-fill"></div>
+		</div>
+	</div>
+	<!-- [ Pre-loader ] End -->
+	<!-- [ navigation menu ] start -->
+	<!-- [ navigation menu ] end -->
+	<!-- [ Header ] start -->
+	<header class="navbar pcoded-header navbar-expand-lg navbar-light header-blue">
+		
+			
+				<div class="m-header">
+					<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+					<a href="#!" class="b-brand">
+						<img src="assets/images/logo.png" alt="" class="logo">
+						<img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+					</a>
+					<a href="#!" class="mob-toggler">
+						<i class="feather icon-more-vertical"></i>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							
+							<div class="search-bar">
+								<input type="text" class="form-control border-0 shadow-none" placeholder="Search hear">
+								<button type="button" class="close" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</li>
+					</ul>
+					<ul class="navbar-nav ml-auto">
+						<li>
+							<div class="dropdown">
+								<a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon feather icon-bell"></i></a>
+								<div class="dropdown-menu dropdown-menu-right notification">
+									<div class="noti-head">
+										<h6 class="d-inline-block m-b-0">Notifications</h6>
+										<div class="float-right">
+											<a href="#!" class="m-r-10">mark as read</a>
+											<a href="#!">clear all</a>
+										</div>
+									</div>
+									
+									<div class="noti-footer">
+										<a href="#!">show all</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="dropdown drp-user">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="feather icon-user"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right profile-notification">
+									<div class="pro-head">
+										<img src="assets/images/user/RamK.jpg" class="img-radius" alt="User-Profile-Image">
+										<span>Ram Karuthapandian</span>
+										<a href="auth-signin.html" class="dud-logout" title="Logout">
+											<i class="feather icon-log-out"></i>
+										</a>
+									</div>
+									<ul class="pro-body">
+										<li><a href="user-profile.html" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
+										<li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
+										<li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+			
+	</header>
+	<!-- [ Header ] end -->
+	
+	
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+	<div class="pcoded-content">
+		<!-- [ Main Content ] start -->
+		<!-- profile header start -->
+		<div class="user-profile user-card mb-4">
+			<div class="card-header border-0 p-0 pb-0">
+				<div class="cover-img-block">
+					<div class="overlay"></div>
+					<div class="change-cover">
+						<div class="dropdown">
+							<a class="drp-icon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon feather icon-camera"></i></a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#"><i class="feather icon-upload-cloud mr-2"></i>upload new</a>
+								<a class="dropdown-item" href="#"><i class="feather icon-image mr-2"></i>from photos</a>
+								<a class="dropdown-item" href="#"><i class="feather icon-film mr-2"></i> upload video</a>
+								<a class="dropdown-item" href="#"><i class="feather icon-trash-2 mr-2"></i>remove</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-body py-0">
+				<div class="user-about-block m-0">
+					<div class="row">
+						<div class="col-md-4 text-center mt-n5">
+							<div class="change-profile text-center">
+								<div class="dropdown w-auto d-inline-block">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<div class="profile-dp">
+											<div class="position-relative d-inline-block">
+												<img class="img-radius img-fluid wid-100" src="assets/images/org/GNAT.png" alt="Org image">
+											</div>
+											<div class="overlay">
+												<span>change</span>
+											</div>
+										</div>
+										<div class="certificated-badge">
+											<i class="fas fa-certificate text-c-blue bg-icon"></i>
+											<i class="fas fa-check front-icon text-white"></i>
+										</div>
+									</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#"><i class="feather icon-upload-cloud mr-2"></i>upload new</a>
+										<a class="dropdown-item" href="#"><i class="feather icon-image mr-2"></i>from photos</a>
+										<a class="dropdown-item" href="#"><i class="feather icon-shield mr-2"></i>Protact</a>
+										<a class="dropdown-item" href="#"><i class="feather icon-trash-2 mr-2"></i>remove</a>
+									</div>
+								</div>
+							</div>
+							<h5 class="mb-1">GNAT</h5>
+							<p class="mb-2 text-muted" style="color: blue !important; font-weight: 600; font-size: medium;">Graduate Nurses Association Of Tamil Nadu</p>
+						</div>
+						<div class="col-md-8 mt-md-4">
+							<div class="row">
+								<div class="col-md-6">
+									<a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-globe mr-2 f-18"></i>https://graduatenursesassociationoftamilnadu.wordpress.com</a>
+									<div class="clearfix"></div>
+									<a href="mailto:demo@domain.com" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-mail mr-2 f-18"></i>demo@domain.com</a>
+									<div class="clearfix"></div>
+									<a href="#!" class="mb-1 text-muted d-flex align-items-end text-h-primary"><i class="feather icon-phone mr-2 f-18"></i>+1 9999-999-999</a>
+								</div>
+								<div class="col-md-6">
+									<div class="media">
+										<i class="feather icon-map-pin mr-2 mt-1 f-18"></i>
+										<div class="media-body">
+											<p class="mb-0 text-muted">No. 36/76, Thiruveethi Amman Kovil 2nd Street</p>
+											<p class="mb-0 text-muted">Aminjikarai, Chennai</p>
+											<p class="mb-0 text-muted">TamilNadu (600029)</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<ul class="nav nav-tabs profile-tabs nav-fill" id="myTab" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link text-reset active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="feather icon-home mr-2"></i>Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-reset" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="feather icon-user mr-2"></i>Members</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-reset" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><i class="feather icon-phone mr-2"></i>Modules</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-reset" id="settings-tab" data-toggle="tab" href="#gallery" role="tab" aria-controls="gallery" aria-selected="false"><i class="feather icon-settings mr-2"></i>Settings</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- profile header end -->
+
+		<!-- profile body start -->
+		<div class="row">
+			<div class="col-md-9 order-md-2">
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+					<div class="card">
+							<div class="card-body d-flex align-items-center justify-content-between">
+								<h5 class="mb-0">Personal details</h5>
+								<button type="button" class="btn btn-primary btn-sm rounded m-0 float-right" data-toggle="collapse" data-target=".pro-det-edit" aria-expanded="false" aria-controls="pro-det-edit-1 pro-det-edit-2">
+									<i class="feather icon-edit"></i>
+								</button>
+							</div>
+							<div class="card-body border-top pro-det-edit collapse show" id="pro-det-edit-1">
+								<form>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Full Name</label>
+										<div class="col-sm-9">
+											Lary Doe
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Gender</label>
+										<div class="col-sm-9">
+											Male
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Birth Date</label>
+										<div class="col-sm-9">
+											16-12-1994
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Martail Status</label>
+										<div class="col-sm-9">
+											Unmarried
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Location</label>
+										<div class="col-sm-9">
+											<p class="mb-0 text-muted">4289 Calvin Street</p>
+											<p class="mb-0 text-muted">Baltimore, near MD Tower Maryland,</p>
+											<p class="mb-0 text-muted">Maryland (21201)</p>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="card-body border-top pro-det-edit collapse " id="pro-det-edit-2">
+								<form>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Full Name</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" placeholder="Full Name" value="Lary Doe">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Gender</label>
+										<div class="col-sm-9">
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" checked>
+												<label class="custom-control-label" for="customRadioInline1">Male</label>
+											</div>
+											<div class="custom-control custom-radio custom-control-inline">
+												<input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+												<label class="custom-control-label" for="customRadioInline2">Female</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Birth Date</label>
+										<div class="col-sm-9">
+											<input type="date" class="form-control" value="1994-12-16">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Martail Status</label>
+										<div class="col-sm-9">
+											<select class="form-control" id="exampleFormControlSelect1">
+												<option>Select Marital Status</option>
+												<option>Married</option>
+												<option selected>Unmarried</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Location</label>
+										<div class="col-sm-9">
+											<textarea class="form-control">4289 Calvin Street,  Baltimore, near MD Tower Maryland, Maryland (21201)</textarea>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label"></label>
+										<div class="col-sm-9">
+											<button type="submit" class="btn btn-primary">Save</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-body d-flex align-items-center justify-content-between">
+								<h5 class="mb-0">Contact Information</h5>
+								<button type="button" class="btn btn-primary btn-sm rounded m-0 float-right" data-toggle="collapse" data-target=".pro-dont-edit" aria-expanded="false" aria-controls="pro-dont-edit-1 pro-dont-edit-2">
+									<i class="feather icon-edit"></i>
+								</button>
+							</div>
+							<div class="card-body border-top pro-dont-edit collapse show" id="pro-dont-edit-1">
+								<form>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Mobile Number</label>
+										<div class="col-sm-9">
+											+1 9999-999-999
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Email Address</label>
+										<div class="col-sm-9">
+											Demo@domain.com
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Twitter</label>
+										<div class="col-sm-9">
+											@phonixcoded
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Skype</label>
+										<div class="col-sm-9">
+											@phonixcoded demo
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="card-body border-top pro-dont-edit collapse " id="pro-dont-edit-2">
+								<form>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Mobile Number</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" placeholder="Full Name" value="+1 9999-999-999">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Email Address</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" placeholder="Ema" value="Demo@domain.com">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Twitter</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" placeholder="Full Name" value="@phonixcoded">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Skype</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" placeholder="Full Name" value="@phonixcoded demo">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label"></label>
+										<div class="col-sm-9">
+											<button type="submit" class="btn btn-primary">Save</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-body d-flex align-items-center justify-content-between">
+								<h5 class="mb-0">other Information</h5>
+								<button type="button" class="btn btn-primary btn-sm rounded m-0 float-right" data-toggle="collapse" data-target=".pro-wrk-edit" aria-expanded="false" aria-controls="pro-wrk-edit-1 pro-wrk-edit-2">
+									<i class="feather icon-edit"></i>
+								</button>
+							</div>
+							<div class="card-body border-top pro-wrk-edit collapse show" id="pro-wrk-edit-1">
+								<form>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Occupation</label>
+										<div class="col-sm-9">
+											Designer
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Skills</label>
+										<div class="col-sm-9">
+											C#, Javascript, Scss
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Jobs</label>
+										<div class="col-sm-9">
+											Phoenixcoded
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="card-body border-top pro-wrk-edit collapse " id="pro-wrk-edit-2">
+								<form>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Occupation</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" placeholder="Full Name" value="Designer">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Email Address</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" placeholder="Ema" value="Demo@domain.com">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label font-weight-bolder">Jobs</label>
+										<div class="col-sm-9">
+											<div class="custom-control custom-checkbox form-check d-inline-block mr-2">
+												<input type="checkbox" class="custom-control-input" id="pro-wrk-chk-1" checked>
+												<label class="custom-control-label" for="pro-wrk-chk-1">C#</label>
+											</div>
+											<div class="custom-control custom-checkbox form-check d-inline-block mr-2">
+												<input type="checkbox" class="custom-control-input" id="pro-wrk-chk-2" checked>
+												<label class="custom-control-label" for="pro-wrk-chk-2">Javascript</label>
+											</div>
+											<div class="custom-control custom-checkbox form-check d-inline-block mr-2">
+												<input type="checkbox" class="custom-control-input" id="pro-wrk-chk-3" checked>
+												<label class="custom-control-label" for="pro-wrk-chk-3">Scss</label>
+											</div>
+											<div class="custom-control custom-checkbox form-check d-inline-block mr-2">
+												<input type="checkbox" class="custom-control-input" id="pro-wrk-chk-4">
+												<label class="custom-control-label" for="pro-wrk-chk-4">Html</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-sm-3 col-form-label"></label>
+										<div class="col-sm-9">
+											<button type="submit" class="btn btn-primary">Save</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					
+					</div>
+					<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+					<div class="col-lg-12">
+						<div class="card user-profile-list">
+							<div class="card-body">
+								<div class="dt-responsive table-responsive">
+									<table id="user-list-table" class="table nowrap">
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Position</th>
+												<th>Office</th>
+												<th>Age</th>
+												<th>Start date</th>
+												<th>Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="d-inline-block align-middle">
+														<img src="assets/images/user/avatar-1.jpg" alt="user image" class="img-radius align-top m-r-15" style="width:40px;">
+														<div class="d-inline-block">
+															<h6 class="m-b-0">Quinn Flynn</h6>
+															<p class="m-b-0">Qf@domain.com</p>
+														</div>
+													</div>
+												</td>
+												<td>Support Lead</td>
+												<td>Edinburgh</td>
+												<td>61</td>
+												<td>2011/04/25</td>
+												<td>
+													<span class="badge badge-light-success">Active</span>
+													<div class="overlay-edit">
+														<button type="button" class="btn btn-icon btn-success"><i class="feather icon-check-circle"></i></button>
+														<button type="button" class="btn btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="d-inline-block align-middle">
+														<img src="assets/images/user/avatar-2.jpg" alt="user image" class="img-radius align-top m-r-15" style="width:40px;">
+														<div class="d-inline-block">
+															<h6 class="m-b-0">Garrett Winters</h6>
+															<p class="m-b-0">gw@domain.com</p>
+														</div>
+													</div>
+												</td>
+												<td>Accountant</td>
+												<td>Tokyo</td>
+												<td>63</td>
+												<td>2011/07/25</td>
+												<td>
+													<span class="badge badge-light-danger">Disabled</span>
+													<div class="overlay-edit">
+														<button type="button" class="btn btn-icon btn-success"><i class="feather icon-check-circle"></i></button>
+														<button type="button" class="btn btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="d-inline-block align-middle">
+														<img src="assets/images/user/avatar-3.jpg" alt="user image" class="img-radius align-top m-r-15" style="width:40px;">
+														<div class="d-inline-block">
+															<h6 class="m-b-0">Ashton Cox</h6>
+															<p class="m-b-0">ac@domain.com</p>
+														</div>
+													</div>
+												</td>
+												<td>Junior Technical Author</td>
+												<td>San Francisco</td>
+												<td>66</td>
+												<td>2009/01/12</td>
+												<td>
+													<span class="badge badge-light-danger">Disabled</span>
+													<div class="overlay-edit">
+														<button type="button" class="btn btn-icon btn-success"><i class="feather icon-check-circle"></i></button>
+														<button type="button" class="btn btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="d-inline-block align-middle">
+														<img src="assets/images/user/avatar-4.jpg" alt="user image" class="img-radius align-top m-r-15" style="width:40px;">
+														<div class="d-inline-block">
+															<h6 class="m-b-0">Cedric Kelly</h6>
+															<p class="m-b-0">ck@domain.com</p>
+														</div>
+													</div>
+												</td>
+												<td>Senior Javascript Developer</td>
+												<td>Edinburgh</td>
+												<td>22</td>
+												<td>2012/03/29</td>
+												<td>
+													<span class="badge badge-light-success">Active</span>
+													<div class="overlay-edit">
+														<button type="button" class="btn btn-icon btn-success"><i class="feather icon-check-circle"></i></button>
+														<button type="button" class="btn btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="d-inline-block align-middle">
+														<img src="assets/images/user/avatar-4.jpg" alt="user image" class="img-radius align-top m-r-15" style="width:40px;">
+														<div class="d-inline-block">
+															<h6 class="m-b-0">Airi Satou</h6>
+															<p class="m-b-0">as@domain.com</p>
+														</div>
+													</div>
+												</td>
+												<td>Accountant</td>
+												<td>Tokyo</td>
+												<td>33</td>
+												<td>2008/11/28</td>
+												<td>
+													<span class="badge badge-light-success">Active</span>
+													<div class="overlay-edit">
+														<button type="button" class="btn btn-icon btn-success"><i class="feather icon-check-circle"></i></button>
+														<button type="button" class="btn btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="d-inline-block align-middle">
+														<img src="assets/images/user/avatar-5.jpg" alt="user image" class="img-radius align-top m-r-15" style="width:40px;">
+														<div class="d-inline-block">
+															<h6 class="m-b-0">Brielle Williamson</h6>
+															<p class="m-b-0">bw@domain.com</p>
+														</div>
+													</div>
+												</td>
+												<td>Integration Specialist</td>
+												<td>New York</td>
+												<td>61</td>
+												<td>2012/12/02</td>
+												<td>
+													<span class="badge badge-light-danger">Disabled</span>
+													<div class="overlay-edit">
+														<button type="button" class="btn btn-icon btn-success"><i class="feather icon-check-circle"></i></button>
+														<button type="button" class="btn btn-icon btn-danger"><i class="feather icon-trash-2"></i></button>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<th>Name</th>
+												<th>Position</th>
+												<th>Office</th>
+												<th>Age</th>
+												<th>Start date</th>
+												<th>Status</th>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					</div>
+					<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+						<div class="row">
+							</div>
+					</div>
+					<div class="tab-pane fade" id="gallery" role="tabpanel" aria-labelledby="settings-tab">
+						<div class="row text-center">
+							<!--<div style="vertical-align:center;display:inline-flex;line-height:50px!important;margin-left:15px;">
+								<i class="feather icon-settings mr-2" style="font-size: large;"></i><h5>Application Settings</h5>
+							</div>-->
+							 <div class="col-sm-12">
+								<div class="card">
+									<div class="card-header" style="padding:10px;">
+										<h5>Group By</h5>
+									</div>
+									<div class="card-body">
+										<form>
+											<div class="row">
+												<div class="col-md-12" style="m argin-top:0px">
+													<select class="js-example-placeholder-multiple col-sm-4">
+														<option value="D">Alabama</option>
+														<option value="AL">Alabama</option>
+														<option value="WY">Wyoming</option>
+														<option value="WY">Coming</option>
+														<option value="WY">Hanry Die</option>
+														<option value="WY">John Doe</option>
+													</select>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>	
+							
+							<div class="col-sm-12">
+								<div class="card ticket-card">
+									<div class="card-body" style="padding: 0;">
+										<p class="m-b-25 badge-light-danger lbl-card" style="background: #c3d5ec99; border-radius: 4px 0px; color: #2020cc;">
+											<i class="fas fa-folder-open m-r-5"></i> Open Tickets</p>
+										<div class="text-center">
+											<h2 class="m-b-0 d-inline-block text-c-red">128</h2>
+											<p class="m-b-0 d-inline-block">Tickets</p>
+											<p class="m-b-0 m-t-10"><i class="fas fa-caret-down m-r-10 f-18 text-c-red"></i>From Previous Month</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 order-md-1">
+			 <div class="card task-board-left">
+                    <div class="card-header">
+                        <h5>Options</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control add_task_todo" placeholder="Search here..." required="">
+                            <div class="input-group-append">
+                                <button class="btn waves-effect waves-light btn-primary btn-msg-send" type="button"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="task-right">
+                            <div class="task-right-header-status">
+                                <span class="f-w-400" data-toggle="collapse">Completed Status</span>
+                                <i class="fas fa-caret-down float-right m-t-5"></i>
+                            </div>
+                            <div class="taskboard-right-progress">
+                                <h6 class="m-t-10">Highest priority</h6>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="m-t-15">High priority</h6>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="m-t-15">Normal priority</h6>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <h6 class="m-t-15">Low priority</h6>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="task-right-header-users">
+                                <span class="f-w-400" data-toggle="collapse">Assign Users</span>
+                                <i class="fas fa-caret-down float-right m-t-5"></i>
+                            </div>
+                            <div class="user-box assign-user taskboard-right-users">
+                                <div class="media mb-2">
+                                    <div class="media-left media-middle mr-3">
+                                        <a href="#!">
+                                            <img class="img-fluid media-object img-radius" src="assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-danger"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h6>Josephin Doe</h6>
+                                        <p>Santa Ana,CA</p>
+                                    </div>
+                                </div>
+                                <div class="media mb-2">
+                                    <div class="media-left media-middle mr-3">
+                                        <a href="#!">
+                                            <img class="img-fluid media-object img-radius" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h6>Josephin Doe</h6>
+                                        <p>Huntingston, NJ</p>
+                                    </div>
+                                </div>
+                                <div class="media mb-2">
+                                    <div class="media-left media-middle mr-3">
+                                        <a href="#!">
+                                            <img class="img-fluid media-object img-radius" src="assets/images/user/avatar-3.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-danger"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h6>Josephin Doe</h6>
+                                        <p>Willingstion, WA</p>
+                                    </div>
+                                </div>
+                                <div class="media mb-2">
+                                    <div class="media-left media-middle mr-3">
+                                        <a href="#!">
+                                            <img class="img-fluid media-object img-radius" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="live-status bg-success"></div>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h6>Josephin Doe</h6>
+                                        <p>Illions, IL</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="task-right-header-revision">
+                                <span class="f-w-400" data-toggle="collapse">Revision</span>
+                                <i class="fas fa-caret-down float-right m-t-5"></i>
+                            </div>
+                            <div class="taskboard-right-revision user-box">
+                                <div class="media">
+                                    <div class="media-left mr-3">
+                                        <a class="btn waves-effect waves-light btn-outline-primary btn-icon" href="#!" role="button"><i class="fas fa-cogs"></i>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="chat-header f-w-400 mb-1">Drop the IE specific hacks for temporal inputs</div>
+                                        <p class="chat-header text-muted">4 minutes ago</p>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left mr-3">
+                                        <a class="btn waves-effect waves-light btn-outline-danger btn-icon" href="#!" role="button"><i class="fas fa-share-alt"></i>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="chat-header f-w-400 mb-1">Have Carousel ignore keyboard events</div>
+                                        <p class="chat-header text-muted">12 Dec,2015</p>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left mr-3">
+                                        <a class="btn waves-effect waves-light btn-outline-warning btn-icon" href="#!" role="button"><i class="fas fa-font"></i>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="chat-header f-w-400 mb-1">Add full font overrides for popovers and tooltips</div>
+                                        <p class="chat-header text-muted">2 month ago</p>
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left mr-3">
+                                        <a class="btn waves-effect waves-light btn-outline-success btn-icon" href="#!" role="button"><i class="fas fa-mobile-alt"></i>
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <div class="chat-header">Responsive Asssignment</div>
+                                        <p class="chat-header text-muted">6 month ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            	
+			</div>
+		</div>
+		<!-- profile body end -->
+	</div>
+</div>
+<!-- [ Main Content ] end -->
+    <!-- Warning Section start -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 11]>
+        <div class="ie-warning">
+            <h1>Warning!!</h1>
+            <p>You are using an outdated version of Internet Explorer, please upgrade
+               <br/>to any of the following web browsers to access this website.
+            </p>
+            <div class="iew-container">
+                <ul class="iew-download">
+                    <li>
+                        <a href="http://www.google.com/chrome/">
+                            <img src="assets/images/browser/chrome.png" alt="Chrome">
+                            <div>Chrome</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+                            <img src="assets/images/browser/firefox.png" alt="Firefox">
+                            <div>Firefox</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.opera.com">
+                            <img src="assets/images/browser/opera.png" alt="Opera">
+                            <div>Opera</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.apple.com/safari/">
+                            <img src="assets/images/browser/safari.png" alt="Safari">
+                            <div>Safari</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="assets/images/browser/ie.png" alt="">
+                            <div>IE (11 & above)</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>Sorry for the inconvenience!</p>
+        </div>
+    <![endif]-->
+    <!-- Warning Section Ends -->
+
+    <!-- Required Js -->
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/ripple.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+	<script src="assets/js/menu-setting.min.js"></script>
+
+
+
+<!-- ekko-lightbox Js -->
+<script src="assets/js/plugins/ekko-lightbox.min.js"></script>
+<script src="assets/js/plugins/lightbox.min.js"></script>
+<script src="assets/js/pages/ac-lightbox.js"></script>
+<script src="assets/js/plugins/select2.full.min.js"></script>
+<!-- form-select-custom Js -->
+<script src="assets/js/pages/form-select-custom.js"></script>
+
+<!-- task-board js -->
+<script src="assets/js/pages/task-board.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.5.4/crossfilter.min.js" 
+			integrity="sha512-YTblpiY3CE9zQBW//UMBfvDF2rz6bS7vhhT5zwzqQ8P7Z0ikBGG8hfcRwmmg3IuLl2Rwk95NJUEs1HCQD4EDKQ==" crossorigin="anonymous"></script>
+<script>
+	window.onload = function() {
+	
+	const myRequest = new Request('assets/seed/envprops.json', {
+	  method: 'GET',
+	  mode: 'cors',
+	  cache: 'default',
+	});
+	
+	const envStruhcture = fetch(myRequest)
+		  .then(response => response.json())
+		  .then(data => console.log("ENV DATA "+data));
+    
+	}
+</script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
