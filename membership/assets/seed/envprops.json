@@ -1,6 +1,9 @@
 [
   {
-    "property_Category": "GENERAL",
+    "property_name": "com.sdx.environment.name",
+    "property_display": "Application Name",
+    "property_value": "ServiceDX",
+    "property_category": "GENERAL",
     "mime_type": "text/plain",
     "property_type": "String",
     "confidential": "FALSE",
@@ -15,7 +18,10 @@
     "description": "Admin, UserManagement"
   },
   {
-    "property_Category": "URL",
+    "property_name": "com.sdx.environment.logo",
+    "property_display": "Application Logo",
+    "property_value": "https://sericedx.com/SDxContact.png",
+    "property_category": "URL",
     "mime_type": "image/png",
     "property_type": "String",
     "confidential": "FALSE",
@@ -30,7 +36,10 @@
     "description": "Admin, UserManagement"
   },
   {
-    "property_Category": "GENERAL",
+    "property_name": "com.sdx.environment.displaytext",
+    "property_display": "Application Display Text",
+    "property_value": "ServiceDX",
+    "property_category": "GENERAL",
     "mime_type": "text/plain",
     "property_type": "String",
     "confidential": "FALSE",
@@ -45,7 +54,10 @@
     "description": ""
   },
   {
-    "property_Category": "GENERAL",
+    "property_name": "com.sdx.environment.mobileapp.name",
+    "property_display": "Mobile App Name",
+    "property_value": "SDxContact",
+    "property_category": "GENERAL",
     "mime_type": "text/plain",
     "property_type": "String",
     "confidential": "FALSE",
@@ -60,7 +72,10 @@
     "description": ""
   },
   {
-    "property_Category": "GENERAL",
+    "property_name": "com.sdx.environment.payments.enable",
+    "property_display": "Payments Active",
+    "property_value": "TRUE",
+    "property_category": "GENERAL",
     "mime_type": "text/plain",
     "property_type": "Boolean",
     "confidential": "FALSE",
@@ -75,7 +90,10 @@
     "description": ""
   },
   {
-    "property_Category": "LIST",
+    "property_name": "com.sdx.environment.payments.platforms.available",
+    "property_display": "Available Payment Platforms",
+    "property_value": "WiPay,RazorPay",
+    "property_category": "LIST",
     "mime_type": "text/plain",
     "property_type": "Array",
     "confidential": "FALSE",
@@ -90,7 +108,10 @@
     "description": ""
   },
   {
-    "property_Category": "GENERAL",
+    "property_name": "com.sdx.environment.payments.cash.enable",
+    "property_display": "Cash Payment Enabled",
+    "property_value": "FALSE",
+    "property_category": "GENERAL",
     "mime_type": "text/plain",
     "property_type": "Boolean",
     "confidential": "FALSE",
@@ -105,7 +126,10 @@
     "description": ""
   },
   {
-    "property_Category": "KEY",
+    "property_name": "com.sdx.environment.payments.razorpay.merchantid",
+    "property_display": "RazorPay merchant ID",
+    "property_value": "API_KEY",
+    "property_category": "KEY",
     "mime_type": "text/plain",
     "property_type": "String",
     "confidential": "TRUE",
@@ -120,7 +144,10 @@
     "description": ""
   },
   {
-    "property_Category": "KEY",
+    "property_name": "com.sdx.environment.payments.wipay.merchantid",
+    "property_display": "WiPay merchant ID",
+    "property_value": "API_KEY",
+    "property_category": "KEY",
     "mime_type": "text/plain",
     "property_type": "String",
     "confidential": "TRUE",
@@ -135,7 +162,10 @@
     "description": ""
   },
   {
-    "property_Category": "GENERAL",
+    "property_name": "com.sdx.environment.google.maps.enabled",
+    "property_display": "Google Maps Enabled",
+    "property_value": "FALSE",
+    "property_category": "GENERAL",
     "mime_type": "text/plain",
     "property_type": "Boolean",
     "confidential": "FALSE",
@@ -150,7 +180,10 @@
     "description": ""
   },
   {
-    "property_Category": "KEY",
+    "property_name": "com.sdx.environment.google.maps.access",
+    "property_display": "Google map Access Key",
+    "property_value": "API_KEY",
+    "property_category": "KEY",
     "mime_type": "text/plain",
     "property_type": "String",
     "confidential": "TRUE",
@@ -165,7 +198,10 @@
     "description": ""
   },
   {
-    "property_Category": "DATA_SEED",
+    "property_name": "com.sdx.environment.seed.data.airports",
+    "property_display": "International Airports List",
+    "property_value": "{JSON.Content}",
+    "property_category": "DATA_SEED",
     "mime_type": "application/json",
     "property_type": "String",
     "confidential": "FALSE",
@@ -180,7 +216,10 @@
     "description": ""
   },
   {
-    "property_Category": "DATA_SEED",
+    "property_name": "com.sdx.environment.seed.data.bloodgroups",
+    "property_display": "International Blood Groups",
+    "property_value": "{JSON.Content}",
+    "property_category": "DATA_SEED",
     "mime_type": "application/json",
     "property_type": "String",
     "confidential": "FALSE",
@@ -195,7 +234,10 @@
     "description": ""
   },
   {
-    "property_Category": "DATA_SEED",
+    "property_name": "com.sdx.environment.seed.data.job.sectors",
+    "property_display": "Industry Job Sectors",
+    "property_value": "{JSON.Content}",
+    "property_category": "DATA_SEED",
     "mime_type": "application/json",
     "property_type": "String",
     "confidential": "FALSE",
@@ -210,7 +252,10 @@
     "description": ""
   },
   {
-    "property_Category": "DATA_SEED",
+    "property_name": "com.sdx.environment.seed.data.intl.currencies",
+    "property_display": "International Currencies",
+    "property_value": "{JSON.Content}",
+    "property_category": "DATA_SEED",
     "mime_type": "application/json",
     "property_type": "String",
     "confidential": "FALSE",
@@ -225,7 +270,10 @@
     "description": ""
   },
   {
-    "property_Category": "DATA_SEED",
+    "property_name": "com.sdx.environment.seed.data.intl.phone.codes",
+    "property_display": "International Phone Codes",
+    "property_value": "{JSON.Content}",
+    "property_category": "DATA_SEED",
     "mime_type": "application/json",
     "property_type": "String",
     "confidential": "FALSE",
@@ -240,7 +288,10 @@
     "description": ""
   },
   {
-    "property_Category": "DATA_SEED",
+    "property_name": "com.sdx.environment.seed.data.intl.countries",
+    "property_display": "International Countries",
+    "property_value": "{JSON.Content}",
+    "property_category": "DATA_SEED",
     "mime_type": "application/json",
     "property_type": "String",
     "confidential": "FALSE",
@@ -255,7 +306,10 @@
     "description": ""
   },
   {
-    "property_Category": "DATA_SEED",
+    "property_name": "com.sdx.environment.seed.data.intl.timezones",
+    "property_display": "International Timezones",
+    "property_value": "{JSON.Content}",
+    "property_category": "DATA_SEED",
     "mime_type": "application/json",
     "property_type": "String",
     "confidential": "FALSE",

@@ -7,9 +7,7 @@ $(document).ready(function() {
     $(".js-example-basic-multiple").select2();
 
     // [ With Placeholder ]
-    $(".js-example-placeholder-multiple").select2({
-        placeholder: "Select Your Name", width:'50%'
-    });
+    
 
     // [ Tagging Support ]
     $(".js-example-tags").select2({

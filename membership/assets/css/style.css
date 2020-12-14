@@ -2234,7 +2234,8 @@ select.form-control:focus::-ms-value {
 }
 
 .col-form-label {
-    padding-top: calc(0.625rem + 1px);
+    /* padding-top: calc(0.625rem + 1px); */
+    padding-top: 0.025rem;
     padding-bottom: calc(0.625rem + 1px);
     margin-bottom: 0;
     font-size: inherit;
@@ -20195,7 +20196,7 @@ h4 {
 }
 
 h5 {
-    font-size: 1rem;
+    font-size: 0.920rem;
 }
 
 h6 {
@@ -29012,7 +29013,7 @@ body.box-layout .pcoded-navbar.theme-horizontal ~ .pcoded-header {
 .table th {
     border-top: 1px solid #e2e5e8;
     white-space: nowrap;
-    padding: 1.05rem 0.75rem;
+    /* padding: 1.05rem 0.75rem; */
 }
 
 .table thead th {
