@@ -845,7 +845,11 @@
 		try {
 			envStructure = fetch(myRequest)
 			  .then(response => response.json())
-			  .then(data => envStructure = data;console.log("ENV DATA "+envStructure));
+			  .then(function(data){
+				//data => console.log("ENV DATA "+JSON.stringify(data))
+				console.log("data GOT "+data)
+				envStructure = data;
+			  });
 		} catch(e){
 			console.log("Error >>>>>>> "+e);
 			envStructure = null;
