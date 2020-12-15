@@ -884,7 +884,7 @@
 					module		+=	value.key;
 					module		+=	'</p>';
 					
-					module		+=	'<div id="'+value.key+'Props" class="text-left" style="margin-top:-50px;margin-left:15px;margin-right:15px;">';
+					module		+=	'<div id="'+valKey+'Props" class="text-left" style="margin-top:-50px;margin-left:15px;margin-right:15px;">';
 					module		+=	'<table class="table table-striped table-bordered nowrap" id="'+valKey+'dt">';
 					module		+=	'<thead>';
 					module		+=	'<tr>';
@@ -906,7 +906,7 @@
 				
 					var grpofseg = faqBySegment.filter(value.key).top(Infinity).reverse();
 					console.log("grpofseg "+grpofseg);
-					console.log("CHECKING the DOM for ["+value.key+"Props]>>>> "+$("#"+value.key+"Props").attr("id"));
+					console.log("CHECKING the DOM for -> ["+value.key+"] ["+valKey+"Props]>>>> "+$("#"+valKey+"Props").attr("id"));
 					$.each(grpofseg, function(index, value){
 						//console.log("value "+JSON.stringify(value));
 					});
